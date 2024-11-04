@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Leave</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Apply for Leave</h2>
+        <form method="POST">
+            <label for="start_date">Start Date</label>
+            <input type="date" name="start_date" required>
+            
+            <label for="end_date">End Date</label>
+            <input type="date" name="end_date" required>
+            
+            <label for="reason">Reason for Leave</label>
+            <textarea name="reason" rows="5" required></textarea>
+            
+            <button type="submit">Submit Leave Request</button>
+        </form>
+    </div>
+
+</body>
+</html>

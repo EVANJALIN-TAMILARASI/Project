@@ -1,0 +1,23 @@
+<h1>Admin Dashboard</h1>
+<a href="{{ url_for('create_user') }}">Create New User</a>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Actions</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>
+            <a href="{{ url_for('update_role', user_id=user.id) }}">Edit Role</a> |
+            <form action="{{ url_for('delete_user', user_id=user.id) }}" method="POST" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
